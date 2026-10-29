@@ -1,0 +1,1 @@
+This prototype uses locally bundled HTML, CSS, and JavaScript only. No external fonts, images, APIs, or assets are requested by the demo.

@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f3ec">
+  <title>Worker Ally | NYC gig worker intake</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="worker-page">
+  <div class="app-shell">
+    <aside class="side-rail" aria-label="Intake navigation">
+      <a class="brand" href="index.html" aria-label="Worker Ally home">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span class="brand-name">worker<span>ally</span></span>
+      </a>
+
+      <div class="rail-intro">
+        <span class="eyebrow">NYC WORKER INTAKE</span>
+        <h1>A little clarity goes a long way.</h1>
+        <p>Tell us what work looks like for you. We’ll map a few useful next steps.</p>
+      </div>
+
+      <section class="progress-block" aria-label="Intake progress">
+        <div class="progress-heading"><span>Your intake</span><strong id="progressText">0%</strong></div>
+        <div class="progress-track" role="progressbar" aria-label="Intake progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progressBar">
+          <span id="progressFill"></span>
+        </div>
+        <p id="stepText">Ready when you are</p>
+      </section>
+
+      <section class="answer-review" aria-label="Your answers">
+        <div class="section-label"><span>YOUR NOTES</span><span class="note-count" id="answerCount">0</span></div>
+        <div class="answer-list" id="answerList">
+          <p class="empty-notes">Your answers will collect here as we go.</p>
+        </div>
+      </section>
+
+      <div class="rail-bottom">
+        <div class="privacy-note">
+          <span class="privacy-icon" aria-hidden="true">●</span>
+          <p><strong>Private by design</strong><br>Nothing leaves this browser. Clear your demo data whenever you like.</p>
+        </div>
+        <button class="text-button" id="resetButton" type="button">↺ <span>Start over</span></button>
+        <a class="agent-link" href="agent.html">View mock agent desk <span aria-hidden="true">↗</span></a>
+      </div>
+    </aside>
+
+    <main class="conversation-panel">
+      <header class="topbar">
+        <div class="topbar-context"><span class="live-dot" aria-hidden="true"></span><span>NYC gig worker support</span></div>
+        <div class="topbar-meta"><span class="demo-tag">DEMO · NO AI API</span><span class="topbar-divider"></span><span>About 3 minutes</span></div>
+      </header>
+
+      <div class="conversation-heading">
+        <div><span class="eyebrow">A CONVERSATION, NOT A FORM</span><h2 id="conversationTitle">Let’s start with your work.</h2></div>
+        <span class="conversation-index" id="conversationIndex">01 <span>/ 09</span></span>
+      </div>
+
+      <section class="chat-scroll" id="chatScroll" aria-label="Conversation">
+        <div class="message-list" id="messageList" aria-live="polite" aria-relevant="additions"></div>
+      </section>
+
+      <section class="choice-dock" id="choiceDock" aria-label="Answer choices">
+        <div class="choice-prompt"><span class="choice-prompt-mark" aria-hidden="true">↳</span><p id="choicePrompt">Choose the option that fits best.</p></div>
+        <div class="choice-list" id="choiceList"></div>
+        <div class="choice-footer" id="choiceFooter"></div>
+      </section>
+
+      <section class="results-view" id="resultsView" hidden aria-live="polite"></section>
+      <footer class="conversation-footer"><span>Worker Ally is a local demo, not legal or financial advice.</span><span>Built for New York City workers <b>·</b> <a href="agent.html">Agent view</a></span></footer>
+    </main>
+  </div>
+
+  <script src="js/worker-profile.js"></script>
+  <script src="js/conversation.js"></script>
+  <script src="js/branching.js"></script>
+  <script src="js/results.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
